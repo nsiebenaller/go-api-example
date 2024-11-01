@@ -1,0 +1,2 @@
+### Get all members
+GET http://localhost:8080/members

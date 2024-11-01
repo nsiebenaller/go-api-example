@@ -1,0 +1,22 @@
+name: go-api-example
+
+services:
+  # PostgreSQL database
+  db:
+    container_name: db
+    build:
+      context: ./docker/db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: abc123
+    user: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+
+volumes:
+  # PostgreSQL volume
+  dbdata:

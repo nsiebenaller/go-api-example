@@ -1,0 +1,5 @@
+### Delete a member by id
+DELETE http://localhost:8080/members/:id
+
+### Delete a member where id is 1
+DELETE http://localhost:8080/members/1
